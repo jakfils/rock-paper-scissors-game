@@ -1,1 +1,90 @@
 @import "libs/normalize.scss";
+
+$page-background-color: aliceblue;
+$hands-color: invert(39%) sepia(99%) saturate(341%) hue-rotate(336deg)
+  brightness(84%) contrast(94%);
+$scores-border-color : #2c2b2b;
+$scores-background-color :#cbcaca;
+$title-font-size: clamp(1.5rem, 1.5vw + 1rem, 2.25rem);
+$scores-font-size:1.2rem;
+$margin: 3.5vw ;
+$scores-padding : 5px 20px;
+$scores-mobile-padding: 0 3px;
+$border-radius: 5px;
+$border : 1px solid $scores-border-color;
+$gap: 10px;
+
+
+body {
+  background-color: $page-background-color;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-size: $title-font-size;
+  margin-bottom: $margin;
+}
+
+.scores{
+    border: $border;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: $scores-padding;
+    margin-bottom: $margin;
+    font-size: $scores-font-size;
+    border-radius: $border-radius;
+    &__player, &__computer {
+        display: flex;
+        white-space: pre;
+    }
+
+    @media screen and (max-width:650px) {
+        border: none;
+        flex-direction: column;
+        gap: $gap;
+         &__player, &__computer{
+        background-color: $scores-background-color;
+        min-width: fit-content;
+        padding: $scores-mobile-padding;
+        }
+        &__computer {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.hands{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5*$gap;
+    margin-bottom: $margin*0.8;
+    &__scissors-img{
+        transform: rotate(90deg);
+    }
+
+    @media screen and (max-width: 650px){
+        gap: 2*$gap;
+    }
+    &__img{
+        width: 50px;
+        height: 50px;
+        filter: $hands-color;
+        cursor: pointer;
+    }
+}
+
+.message {
+    margin: 0 auto;
+}

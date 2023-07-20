@@ -73,4 +73,80 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+body {
+  background-color: aliceblue;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  text-align: center;
+  font-size: clamp(1.5rem, 1.5vw + 1rem, 2.25rem);
+  margin-bottom: 3.5vw;
+}
+
+.scores {
+  border: 1px solid #2c2b2b;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 20px;
+  margin-bottom: 3.5vw;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.scores__player, .scores__computer {
+  display: flex;
+  white-space: pre;
+}
+@media screen and (max-width: 650px) {
+  .scores {
+    border: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .scores__player, .scores__computer {
+    background-color: #cbcaca;
+    min-width: fit-content;
+    padding: 0 3px;
+  }
+  .scores__computer {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+
+.hands {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 2.8vw;
+}
+.hands__scissors-img {
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 650px) {
+  .hands {
+    gap: 20px;
+  }
+}
+.hands__img {
+  width: 50px;
+  height: 50px;
+  filter: invert(39%) sepia(99%) saturate(341%) hue-rotate(336deg) brightness(84%) contrast(94%);
+  cursor: pointer;
+}
+
+.message {
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
