@@ -16,17 +16,32 @@
 
 <body>
   <div class="container">
+    <!-- Title -->
     <h1 class="title">Rock Paper Scissors Game</h1>
+    <!-- Scores -->
     <div class="scores">
-      <div class="scores__player"><p>You</p><p> | </p><span class="scores__value scores__player-value">0</span></div>
-      <div class="scores__computer"><span class="scores__value scores__computer-value">0</span><p> | </p><p>Computer</p></div>
+      <div class="scores__player">
+        <p>You</p>
+        <p> | </p><span class="scores__value scores__player-value">0</span>
+      </div>
+      <div class="scores__computer"><span class="scores__value scores__computer-value">0</span>
+        <p> | </p>
+        <p>Computer</p>
+      </div>
     </div>
+    <!-- Images (hands) -->
     <div class="hands">
-      <div class="hands__rock"><img class="hands__img hands__rock-img" data-hand="rock" src="./img/hand-back-fist-regular.svg" alt="Rock"></i></div>
-      <div class="hands__paper"><img class="hands__img hands__paper-img" data-hand="paper" src="./img/hand-regular.svg" alt="Paper"></i></div>
-      <div class="hands__scissors"><img class="hands__img hands__scissors-img" data-hand="scissors" src="./img/hand-scissors-regular.svg" alt="Scissors"></i></div>
+      <div class="hands__rock"><img class="hands__img hands__rock-img" data-hand="rock"
+          src="./img/hand-back-fist-regular.svg" alt="Rock"></i></div>
+      <div class="hands__paper"><img class="hands__img hands__paper-img" data-hand="paper" src="./img/hand-regular.svg"
+          alt="Paper"></i></div>
+      <div class="hands__scissors"><img class="hands__img hands__scissors-img" data-hand="scissors"
+          src="./img/hand-scissors-regular.svg" alt="Scissors"></i></div>
     </div>
-    <div class="message"><p>You <span class="message__status">Win</span><span> Computer plays </span><span class="message__from-computer">Paper</span></p></div>
+    <!-- Displayed message -->
+    <div class="message message--run-animation"><span class="message__start"></span><span class="message__end"></span>
+      </p>
+    </div>
   </div>
   <script src="./js/index.js"></script>
 </body>
