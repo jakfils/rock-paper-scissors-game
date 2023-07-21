@@ -62,6 +62,9 @@ body {
   &__computer {
     display: flex;
     white-space: pre;
+    &-value{
+        font-weight: 800;
+    }
   }
 
   @media screen and (max-width: 650px) {
