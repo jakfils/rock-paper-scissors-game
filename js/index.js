@@ -66,17 +66,17 @@ yourHandsElts.forEach((yourHandElt) => {
 
     // On Win
     if (gameResult[0].toString().includes("Win")) {
+      yourScoreValue++;
       yourScore.textContent = yourScoreValue;
       message.style.color = "#8ac926";
-      yourScoreValue++;
       handleAnimateClass();
       
       // On lose
     } else if (gameResult[0].toString().includes("Lose")) {
+      computerScoreValue++;
       yourScore.textContent = yourScoreValue;
       message.style.color = "#e76f51";
       computerScore.textContent = computerScoreValue;
-      computerScoreValue++;
       handleAnimateClass();
 
       // On draw
